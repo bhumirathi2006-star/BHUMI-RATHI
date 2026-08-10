@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cinzel", ui-serif, Georgia, serif;
+  --color-brand-cream: #FFF8E8;
+  --color-brand-navy: #132623;
+  --color-brand-gold: #F4A261;
+  --color-brand-charcoal: #1A1A1A;
+  --color-brand-saffron: #C65D3B;
+  --color-brand-teal: #2A9D8F;
+}
+
+/* Custom smooth transitions and animations */
+html {
+  scroll-behavior: smooth;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Add custom animations for a subtle parallax feel */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2.5s ease-in-out infinite;
+}
+
+/* Sunset Theme custom utility styles */
+.border-geometric {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-brand-gold);
+}
+
+.sharp-card {
+  border-radius: 1.25rem !important;
+  box-shadow: 0 4px 20px -2px rgba(19, 38, 35, 0.08), 0 2px 8px -1px rgba(19, 38, 35, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sharp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(198, 93, 59, 0.15), 0 10px 10px -5px rgba(244, 162, 97, 0.1);
+  border-color: var(--color-brand-gold);
+}
+
+.sharp-button {
+  border-radius: 0.75rem !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sharp-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px -2px rgba(198, 93, 59, 0.25);
+}
+
+/* Modern Glassmorphism & Sunset Enhancements */
+.glass-nav {
+  background-color: rgba(19, 38, 35, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.sunset-gradient-bg {
+  background: linear-gradient(135deg, #132623 0%, #1c3d37 50%, #2a524a 100%);
+}
+
+.sunset-card-gradient {
+  background: linear-gradient(180deg, rgba(255, 248, 232, 0.03) 0%, rgba(244, 162, 97, 0.05) 100%);
+}
+
+.glow-hover-terracotta:hover {
+  box-shadow: 0 0 25px rgba(198, 93, 59, 0.35);
+}
+
+.glow-hover-teal:hover {
+  box-shadow: 0 0 25px rgba(42, 157, 143, 0.35);
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF8E8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #132623;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C65D3B;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F4A261;
+}
+

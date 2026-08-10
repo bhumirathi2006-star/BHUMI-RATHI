@@ -1,0 +1,6 @@
+{
+  "name": "Explore Rajasthan",
+  "description": "An immersive digital travel guide showcasing the rich heritage, majestic forts, traditional food, and vibrant festivals of Rajasthan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
