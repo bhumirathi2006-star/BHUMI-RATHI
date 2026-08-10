@@ -16,7 +16,7 @@ export default function Hero({ onExploreClick, onFilterCategory }: HeroProps) {
   ];
 
   return (
-    <section id="home" className="relative h-screen min-h-[650px] w-full flex items-center justify-center pt-16 overflow-hidden bg-brand-navy text-white">
+    <section id="home" className="relative min-h-screen w-full flex items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-12 overflow-hidden bg-brand-navy text-white">
       {/* Background Video with structured elegant overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Cinematic Looping Background Video */}
@@ -43,11 +43,11 @@ export default function Hero({ onExploreClick, onFilterCategory }: HeroProps) {
       </div>
 
       {/* Structured Gold Accent Lines */}
-      <div className="absolute top-20 left-0 right-0 h-1 bg-brand-gold opacity-80" />
+      <div className="absolute top-24 left-0 right-0 h-1 bg-brand-gold opacity-80" />
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-brand-gold opacity-80" />
 
       {/* Hero Content inside a rigid, framed container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-12 pb-16 md:py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 sm:pt-12 pb-16 md:pb-24">
         
         {/* Sharp Tagline Frame */}
         <motion.div
@@ -68,10 +68,10 @@ export default function Hero({ onExploreClick, onFilterCategory }: HeroProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white uppercase font-serif"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white uppercase font-serif mt-4 sm:mt-6"
         >
           <span className="block text-white drop-shadow-md">Explore The Rich</span>
-          <span className="block text-brand-gold italic tracking-wide mt-2">
+          <span className="block text-brand-gold italic tracking-wide mt-3 sm:mt-4">
             Heritage & Valor
           </span>
         </motion.h1>
